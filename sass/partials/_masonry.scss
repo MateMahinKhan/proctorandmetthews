@@ -1,0 +1,111 @@
+//VIDEO
+//////////////////////////////////////////////////////////////////////////////
+.masonry-grid {
+  width: 100%;
+  //      $rrr:-20px;
+  //     -webkit-box-shadow: inset $rrr 0px 0px 0px rgba(0, 0, 0, 1);
+  //     -moz-box-shadow: inset $rrr 0px 0px 0px rgba(0, 0, 0, 1);
+  //     box-shadow: inset $rrr 0px 0px 0px rgba(0, 0, 0, 1);
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 100;
+  }
+
+  &:before {
+    left: 0;
+    width: $gutter2;
+  }
+
+  &:after {
+    right: 0;
+    width: $gutter2 + (2+$gutter/2);
+  }
+
+  .col--6 {
+    .figure__caption {
+      @extend %font-base;
+    }
+  }
+
+  .list__item {
+    //padding:$gutter;
+    float: none;
+    background: white;
+    margin-bottom: 0;
+    padding: 0 !important;
+    height: auto;
+    overflow: hidden;
+    @include border-skeleton(right, $c-skeleton-inside);
+    //@include border-skeleton(right, $c-skeleton-inside);
+    @include border-skeleton(top, $c-skeleton-inside);
+    //outline: $skeleton solid $c-skeleton-inside;
+    &:first-child,
+    &:nth-child(2) {
+      border-top: 0 none;
+
+      .gallery__link {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child,
+    &:nth-last-child(2),
+    &:nth-last-child(3) {
+      bottom: 0;
+    }
+  }
+
+  .gallery__link {
+    display: block;
+    padding: $gutter*2;
+    border-bottom: 0;
+  }
+
+  .gallery__img {
+    display: block;
+    width: 101%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.skeleton--masonry {
+  .btn {
+    padding: 0;
+    border: 0;
+    border-bottom: 1px $s-dotted transparent;
+    background-color: transparent;
+    margin-left: $gutter2;
+
+    &:hover {
+      border-bottom: 1px $s-dotted $c-2-text-active;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+}
+
+.masonry__text {
+  padding: $gutter ($gutter2 + (2+$gutter/2));
+
+  a {
+    border-bottom: 1px dotted $c-1-text;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding-bottom: $gutter;
+  }
+}

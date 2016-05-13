@@ -1,0 +1,73 @@
+/////TEST
+.test__body {
+    background: #999;
+}
+
+.test__container {
+    width: 90%;
+    background: white;
+    padding: 1em;
+    @include center-block();
+}
+
+.test__title {
+    font-family: $font-title;
+    margin-bottom: $gutter;
+    margin-top: $gutter*2;
+}
+
+.text {
+    font-size: $font-size-base;
+}
+
+.small {
+    font-size: $font-size-small;
+}
+
+/// TEST BOARDER
+$cb: #ccc;
+body {
+    background-color: $cb;
+}
+
+.big__img {
+    border-bottom: $space-bottom solid $cb;
+    margin-bottom: 0;
+    .box {
+    	padding-top: $space-bottom;
+    	padding-bottom: $space-bottom;
+    }
+}
+
+.box {
+    background: white;
+}
+
+.article__content {
+    .box__content {
+        border-left: $space-bottom solid $cb;
+        margin-top: $gutter!important;
+        
+    	margin-bottom: $gutter;
+
+    }
+    .box__aside {
+        margin-top:$gutter;
+    	margin-bottom: $gutter;
+    	margin-right: -1*$space-bottom;
+    	padding-left:$gutter/2;
+        border-right: $space-bottom solid $cb;
+        .figure {
+        	padding-bottom: $space-bottom;
+            border-bottom: $space-bottom solid $cb;
+        }
+    }
+}
+.gallery--list {
+	.list__item {
+		border-right: 5px solid $cb;
+		&:last-child {
+			border-color: transparent;
+		}
+	}
+}

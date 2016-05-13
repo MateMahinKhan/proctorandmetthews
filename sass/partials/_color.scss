@@ -1,0 +1,184 @@
+//Color
+//////////////////////////////////////////////////////////////////////////////
+$list-text: $c-1-text,
+$c-2-text,
+$c-3-text,
+$c-4-text,
+$c-5-text,
+$c-6-text,
+$c-7-text;
+$list-border: $c-1-border,
+$c-2-border,
+$c-3-border,
+$c-4-border,
+$c-5-border,
+$c-6-border,
+$c-7-border;
+$list-text-active: $c-1-text-active,
+$c-2-text-active,
+$c-3-text-active,
+$c-4-text-active,
+$c-5-text-active,
+$c-6-text-active,
+$c-7-text-active;
+$list-border-active:$c-1-border-active,
+$c-2-border-active,
+$c-3-border-active,
+$c-4-border-active,
+$c-5-border-active,
+$c-6-border-active,
+$c-7-border-active;
+$list-bg:$c-1-bg,
+$c-2-bg,
+$c-3-bg,
+$c-4-bg,
+$c-5-bg,
+$c-6-bg,
+$c-7-bg;
+$list-bg-light:$c-1-border,
+$c-2-border,
+$c-3-border,
+$c-4-border,
+$c-5-border,
+$c-6-border,
+$c-7-border;
+
+@for $i from 1 through length($list-text) {
+    .c--#{$i} {
+        color: nth($list-text, $i);
+    }
+    .bg--#{$i} {
+        background: nth($list-text, $i);
+    }
+    .nav__btn:hover {
+        .bg--#{$i} {
+            background: nth($list-border, $i);
+        }
+    }
+
+    .color--#{$i} {
+        background-color: nth($list-bg-light, $i);
+
+
+
+        // &.home {
+        //     background-color: nth($list-bg, $i);
+        // }
+
+        .jumbotron {
+            background-color: nth($list-bg-light, $i);
+        }
+
+        .box {
+            border-color: nth($list-border, $i);
+        }
+
+        .title--color {
+            //color: nth($list-text, $i);
+        }
+
+        .nav__btn {
+            border-color: nth($list-border, $i);
+            .nav__btn__line:not(.bg--#{$i}) {
+                background: $c-border-gray;
+            }
+        }
+
+        .video__poster {
+            &:active {
+                &:after {
+                    border-left-color: nth($list-border-active, $i);
+                }
+            }
+        }
+
+        .article__content a,
+        .masonry__text a {
+            border-bottom-color: nth($list-border, $i);
+            &:hover {
+                border-bottom-color: nth($list-bg, $i);
+            }
+        }
+        .footer {
+            background-color:nth($list-bg-light, $i);
+        }
+    }
+    .link--#{$i} {
+        color: nth($list-text, $i);
+
+        .box__content & {
+            color: inherit;
+        }
+        .title--color {
+            color: nth($list-text, $i);
+        }
+        .description {
+            color: $c-text;
+        }
+        &:hover {
+            color: nth($list-border, $i);
+            .description {
+                //color: nth($list-border, $i);
+                border-bottom-color: nth($list-border, $i);
+            }
+            .gallery__img,
+            img {
+                border-color: nth($list-text, $i);
+            }
+            .title--color {
+                color: nth($list-border, $i);
+                border-bottom: 1px $s-dotted nth($list-border, $i);
+            }
+        }
+        &:active {
+            color: nth($list-text-active, $i);
+            .description {
+                //color: nth($list-border, $i);
+                border-bottom-color: nth($list-border-active, $i);
+            }
+            .gallery__img,
+            img {
+                border-color: nth($list-text-active, $i);
+            }
+            .title--color {
+                color: nth($list-text-active, $i);
+                border-bottom-color: nth($list-border-active, $i);
+            }
+        }
+        // &.menu__link {
+        //     border-color: nth($list-border, $i);
+        //     &:hover {
+        //         border-color: nth($list-text, $i);
+        //     }
+        //     &:active {
+        //         border-color: nth($list-text-active, $i);
+        //     }
+        // }
+        .dl--invert & {
+            color: nth($list-text, $i);
+        }
+    }
+    .menu.is-active {
+        .menu__link:not(.is-active) {
+            color: $c-0-text-no-active;
+            //border-color: $c-0-border-no-active;
+        }
+        .menu__link.link--#{$i}:not(.is-active):hover {
+            color: nth($list-text, $i);
+            //border-color: nth($list-border, $i);
+        }
+        .menu__link.link--#{$i}:not(.is-active):active {
+            color: nth($list-text-active, $i);
+            //border-color: nth($list-border-active, $i);
+        }
+    }
+}
+
+.logo {
+    .link--1.menu__link {
+        border-color: $c-1-border;
+        &:hover {
+            border-color: $c-1-text;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+////FOOTER
+//////////////////////////////////////////////////////////////////////////////
+.footer {
+    position: relative;
+    padding: $gutter 0;
+    margin-top: $space-bottom/2;
+    background: $gray;
+    background-repeat: no-repeat;
+    @include background-cover;
+    background-attachment: fixed;
+    // &:after {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     background: rgba(0, 0, 0, 0.5);
+    //     z-index: 1;
+    // }
+    .container {
+        position: relative;
+        z-index: 10;
+        color: $white;
+        //@include opacity(0.75);
+        @include transition;
+
+    }
+    .col--4,
+    .col--3 {
+        a {
+            color: $white;
+            &:hover {
+                border-bottom: 1px dotted;
+            }
+        }
+    }
+}
+
+.social__link {
+    display: inline-block;
+    margin-right: $gutter/2;
+    border-bottom: 0;
+    color: $white;
+    @extend %font-base;
+    .icon-twitter {
+        &:before {
+            font-size: 0.85em;
+        }
+    }
+    &:hover {
+        border-bottom: 0;
+        // .icon-twitter {
+        //     color: #55acee;
+        // }
+        // .icon-facebook {
+        //     color: #3b5998;
+        // }
+        // .icon-linkedin2 {
+        //     color: #0077b5;
+        // }
+
+        .icon-twitter,
+        .icon-facebook,
+        .icon-linkedin2 {
+            color: $c-1-text-active;
+        }
+    }
+}
+
+.jumbotron__img--people,
+.footer--people {
+    background-image: url("../img/people/PM_Portraits-7903.jpg");
+}
+
+.jumbotron__img--projects,
+.footer--projects {
+    background-image: url("../img/projects/cover-projects-Tetbury-18.jpg");
+}

@@ -1,0 +1,45 @@
+//TYPO
+//////////////////////////////////////////////////////////////////////////////
+.font--small {
+    @extend %font-small;
+}
+
+.font--base {
+    @extend %font-base;
+}
+
+.font--large {
+    @extend %font-large;
+}
+
+
+
+.header {
+    @extend %font-small;
+
+    
+
+    @media (min-width: 765px) and (max-width: 959px) {
+        font-size:12px;
+        font-size:1.2vw;
+    }
+    @media (min-width: 960px) {
+        font-size:12px;
+        //font-size:1.2vw;
+    }
+
+    // @media (min-width: 767px) {
+    //     font-size:9px;
+    //     //font-size:1.2vw;
+    // }
+    // @media (min-width: 808px) {
+    //     font-size:10px;
+    //     //font-size:1.2vw;
+    // }
+    // @media (min-width: 888px) {
+    //     font-size:10px;
+    //     //font-size:1.2vw;
+    // }
+
+
+}

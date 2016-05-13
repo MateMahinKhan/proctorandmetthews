@@ -1,0 +1,259 @@
+// Mixins
+// --------------------------------------------------
+// Utilities
+@import "mixins/clearfix",
+"mixins/border",
+"mixins/opacity",
+"mixins/_center-block",
+"mixins/image";
+// @import "mixins/grid-framework",
+//         "mixins/grid";
+//PERSONAL
+@mixin bs($box: border-box) {
+    box-sizing: $box;
+}
+
+@mixin navbar-border($color: $navbar-default-border-color) {
+    border: 2px solid $color;
+}
+
+@mixin transition($what:all, $speed:500ms, $style:ease) {
+    -webkit-transition: $what $speed $style;
+    -moz-transition: $what $speed $style;
+    -ms-transition: $what $speed $style;
+    -o-transition: $what $speed $style;
+    transition: $what $speed $style;
+}
+
+@mixin user-select($select:none) {
+    -webkit-user-select: $select;
+    -moz-user-select: $select;
+    -ms-user-select: $select;
+    -o-user-select: $select;
+    user-select: $select;
+}
+
+@mixin opacity($decimal:1) {
+    $percent: $decimal * 100;
+    filter: alpha(opacity=$percent);
+    -moz-opacity: $decimal;
+    -khtml-opacity: $decimal;
+    opacity: $decimal;
+}
+
+@mixin translateY($y:-50%) {
+    -ms-transform: translateY($y);
+    -webkit-transform: translateY($y);
+    transform: translateY($y);
+}
+
+@mixin translateX($x:-50%) {
+    -ms-transform: translateX($x);
+    -webkit-transform: translateX($x);
+    transform: translateX($x);
+}
+
+@mixin translateXY($x:-50%, $y:-50%) {
+    -ms-transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin rotate($r:90deg) {
+    -ms-transform: rotate($r);
+    -webkit-transform: rotate($r);
+    transform: rotate($r);
+}
+
+@mixin origin($x:50%, $y:50%) {
+    -ms-transform-origin: $x $y;
+    -webkit-transform-origin: $x $y;
+    transform-origin: $x $y;
+}
+
+@mixin column-gap ($size:$gutter) {
+    -webkit-column-gap: $size;
+    -moz-column-gap: $size;
+    column-gap: $size;
+}
+
+@mixin column-count($n:2) {
+    -webkit-column-count: $n;
+    -moz-column-count: $n;
+    column-count: $n;
+}
+
+// BOX COLORS
+@function set-box-text-color($color) {
+    @if ( $color==$black) {
+        @return $white;
+    }
+    @else {
+        @return $white;
+    }
+}
+
+@mixin shadow-bottom {
+    box-shadow: 0 10px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+//https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    // >  .box__cover__h {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    // }
+}
+
+///BREAKPOINT
+/////////////////////////////////////////////
+@mixin border-dotted($pos) {
+    @if $pos==left {
+        border-left: 1px $s-dotted $c-border-gray;
+    }
+    @else if $pos==right {
+        border-right: 1px $s-dotted $c-border-gray;
+    }
+    @else if $pos==top {
+        border-top: 1px $s-dotted $c-border-gray;
+    }
+    @else if $pos==bottom {
+        border-bottom: 1px $s-dotted $c-border-gray;
+    }
+}
+
+@mixin border-skeleton($pos, $col: $body-bg) {
+    @if $pos==left {
+        border-left: $skeleton solid $col;
+    }
+    @else if $pos==right {
+        border-right: $skeleton solid $col;
+    }
+    @else if $pos==top {
+        border-top: $skeleton solid $col;
+    }
+    @else if $pos==bottom {
+        border-bottom: $skeleton solid $col;
+    }
+}
+
+///BREAKPOINT
+/////////////////////////////////////////////
+@mixin breakpoint($point) {
+    @if $point==xlarge {
+        @media (max-width: $screen-lg-max) {
+            @content;
+        }
+    }
+    @else if $point==xl-min {
+        @media (min-width: $screen-lg-min) {
+            @content;
+        }
+    }
+    @else if $point==lg-min {
+        @media (min-width: $screen-lg-min) {
+            @content;
+        }
+    }
+    @else if $point==lg-max {
+        @media (max-width: $screen-lg-max) {
+            @content;
+        }
+    }
+    @else if $point==ml-min {
+        @media (min-width: 800px) {
+            @content;
+        }
+    }
+    @else if $point==md-min {
+        @media (min-width: $screen-md) {
+            @content;
+        }
+    }
+    @else if $point==md-max {
+        @media (max-width: $screen-md-max) {
+            @content;
+        }
+    }
+    @else if $point==sm-max {
+        @media (max-width: $screen-sm) {
+            @content;
+        }
+    }
+    @else if $point==sm-min {
+        @media (min-width: $screen-sm) {
+            @content;
+        }
+    }
+    @else if $point==xs-min {
+        @media (min-width: $screen-xs) {
+            @content;
+        }
+    }
+    @else if $point==xs-max {
+        @media (max-width: $screen-xs-max) {
+            @content;
+        }
+    }
+    @else if $point==point-min {
+        @media (min-width: $grid-float-breakpoint) {
+            @content;
+        }
+    }
+    @else if $point==point-max {
+        @media (max-width: $grid-float-breakpoint) {
+            @content;
+        }
+    }
+}
+
+@mixin shadow-border($top:6px, $left:6px, $color:$c-skeleton-inside) {
+    -webkit-box-shadow: inset $left $top 0px 0px $color;
+    -moz-box-shadow: inset $left $top 0px 0px $color;
+    box-shadow: inset $left $top 0px 0px $color;
+}
+
+@mixin background-cover {
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+%aspect-ratio__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+%shadow-bottom {
+    box-shadow: 0 10px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+%caption-color {
+    color: $c-7-text;
+}
+
+@mixin remove-last-row-border($n-columns) {
+  .list__item:nth-child(#{$n-columns}n+1):nth-last-child(-n+#{$n-columns}),
+  .list__item:nth-child(#{$n-columns}n+1):nth-last-child(-n+#{$n-columns}) ~ .list__item {
+    border-bottom: none;
+    margin-bottom: $gutter;
+  }
+}

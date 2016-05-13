@@ -1,0 +1,213 @@
+//Navigation
+//////////////////////////////////////////////////////////////////////////////
+.header {
+  position: relative;
+  padding: $skeleton 0;
+  //margin: 0 0 $space-bottom 0 ;
+  font-weight: bold;
+  font-family: $font-title;
+  background-color: $bg-header;
+  left: 0;
+  right: 0;
+  //max-height: 100%;
+  overflow:auto;
+  z-index: 1000;
+  //@extend %shadow-bottom;
+  //border-bottom:2px solid white;
+  //@include transition;
+  @include clearfix;
+
+  .row {
+    margin-bottom:0;
+  }
+
+  [class*="col--"]:first-child {
+    padding-left: 0;
+  }
+
+  [class*="col--"]:last-child {
+    padding-right: 0;
+  }
+
+
+  .box {
+    display: block;
+    padding: $gutter;
+    background-color: $white; //$bg-header
+  }
+
+  .menu__link {
+    display: block;
+    padding-left: $space-outside;
+    border-bottom: 1px solid $body-bg;
+    @include transition(all, 0.5s, ease);
+    position: relative;
+
+    @include breakpoint(sm-min) {
+      padding-left: $gutter/2;
+      border-bottom-style: none; //solid
+
+      &:hover,
+      &:active {
+        border-bottom-style: none; //solid
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        background: $white;
+        position: absolute;
+        top: 0;
+        height: 150px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  .row {
+    .container {
+      background-color: transparent;
+      overflow: hidden;
+    }
+  }
+}
+
+.logo .menu__link {
+  padding-left: $space-outside;
+  border-bottom-style: none; //solid
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header--top,
+.header--bottom {
+  position: fixed;
+  margin-bottom: 0;
+}
+
+.header--top {
+  top: 0;
+
+  .no-js & {
+    top: 0;
+  }
+}
+
+.header--top--negative {
+  margin-top: -51 - $space-bottom;
+  //51 height of nav
+  &.header--fix {
+    margin-top: -54px;
+  }
+}
+
+.header--bottom {
+  bottom: 0;
+}
+
+.menu {
+  @include transition;
+}
+
+.header .container,
+.nav {
+  position: relative;
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav--collapsed {
+  display: none;
+}
+///BTN
+///////////////////////////////////////////////
+.nav__btn {
+  display: block;
+  width: 41px;
+  height: 41px;
+  border: 0 none;
+  padding: 7px 6px;
+  outline: none;
+  //@include border-radius(9px);
+  @include transition;
+  background-color: $white;
+}
+
+.nav__btn__line {
+  display: block;
+  height: 3px;
+  width:100%;
+  margin-bottom: 2px;
+  @include transition;
+  @include border-radius(1px);
+}
+///BREAKPOINT
+///////////////////////////////////////////////
+@media (max-width: 767px) {
+  .logo {
+    display: inline-block;
+  }
+
+  .nav {
+    margin-top: $space-bottom;
+    clear: left;
+  }
+
+  .menu {
+    width: 100%;
+
+    .col--1 {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin: $space-bottom 0;
+    }
+  }
+}
+
+@include breakpoint(sm-min) {
+  .nav__btn {
+    display: none;
+  }
+
+  .nav--collapsed {
+    display: block!important;
+  }
+
+  .row--8 .logo {
+    padding-right: $gutter;
+  }
+}
+
+@keyframes slide-nav {
+  0% {
+    top: 100%;
+    top: 100vh;
+  }
+
+  15% {
+    top: 100%;
+    top: 100vh;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.no-js .header--top {
+  top: 0;
+  //animation: slide-nav 2s ease-out;
+}

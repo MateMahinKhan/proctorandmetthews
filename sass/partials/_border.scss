@@ -1,0 +1,45 @@
+//BORDER
+//////////////////////////////////////////////////////////////////////////////
+.border-left--dotted {
+    @include border-dotted(top);
+    @include breakpoint(ml-min) {
+        border-top: 0;
+        @include border-dotted(left);
+    }
+}
+
+.border-right--dotted {
+    .box__col__content--1 {
+        // padding-bottom: $space-bottom;
+        // margin-bottom: $space-bottom;
+        @include border-dotted(bottom);
+    }
+    @include breakpoint(sm-min) {
+        @include border-dotted(right);
+        .box__col__content--1 {
+            border-bottom: 0;
+        }
+    }
+}
+
+.border-bottom--dotted {
+    padding-bottom: $space-bottom;
+    margin-bottom: $space-bottom;
+    border-bottom: 1px $s-dotted $c-border-gray;
+}
+
+.border--default {
+    border-color: $c-0-border !important;
+    .box__title {
+        color: $c-0-text !important;
+    }
+}
+
+a {
+    img {
+        border: 1px solid transparent;
+        &:hover {
+            border: 1px solid transparent;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+//LIST
+//////////////////////////////////////////////////////////////////////////////
+//UL
+//==========================================================================
+.list--no {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.list--inline {
+    @include clearfix;
+}
+
+.list__item {
+    margin-bottom: ($space-bottom /2 )-2; //pixel perfect
+}
+
+//DL
+//==========================================================================
+.dl {
+    margin: 0;
+    .dl__dt {
+        font-weight: bold;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .dl__dd {
+        margin-left:0;
+    }
+}
+
+.dl--large {
+    .dl__dt,
+    .dl__dd {
+        margin-top: ($space-bottom /2 )-2; //pixel perfect
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.dl--inline {
+    .dl__dt {
+        float: left;
+        clear: left;
+        margin-right: 0.2em;
+    }
+
+    &.dl--large {//to align top
+        .dl__dt:first-child + dd {
+            margin-top:0;
+        }
+    }
+}
+
+.dl--invert {
+    .dl__dt {
+        margin-top: $space-bottom;
+        font-weight: normal;
+    }
+    .dl__dd {
+        font-weight: bold;
+    }
+    a {
+        border-bottom: none;
+        &.is-active:hover {
+            border-bottom: 0;
+        }
+    }
+}

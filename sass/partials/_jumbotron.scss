@@ -1,0 +1,437 @@
+//==========================================================================
+//  JUMBOTRON
+//==========================================================================
+html {
+  @include transition(background, $time-home,ease);
+}
+
+@keyframes img-show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes boxcover-show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  75% {
+    opacity: 0;
+    background: rgba(0, 0, 0, 0);
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3);
+    visibility: visible;
+  }
+}
+
+@keyframes boxcover-show-hide {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  15% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  40% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  55% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  75% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes boxtext-show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  15% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  40% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  55% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  @include transition(all, $time-home,ease);
+
+  & > .container {
+    overflow: visible;
+  }
+
+  .c-light {
+    color: $white;
+  }
+
+  .c-dark {
+    color: $black;
+  }
+
+  & + .row {
+    margin-top: $skeleton;
+  }
+
+  .article__header {
+    padding: $space-outside;
+    color: $white;
+  }
+
+  .article__header,
+  .jumbotron__text,
+  .slides {
+    font-size: 26px;
+    font-size: 5.5vw;
+    line-height: 110%;
+    @include transition;
+
+    @media (min-width: 320px) {
+      font-size: 26px;
+      font-size: 5.5vw;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+      font-size: 5.5vw;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 60px;
+    }
+
+    .container {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.article__title {
+  font-family: $font-title;
+}
+
+.article__title,
+.article__intro {
+  display: inline;
+}
+
+.jumbotron--full {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: $gray;
+  //background-image: url("../img/homepage.jpg");
+  background-repeat: no-repeat;
+  @include background-cover;
+  overflow: hidden;
+  background-attachment: fixed;
+
+  & + .main-content {
+    position: absolute;
+    top: 100%;
+    top: 100vh;
+    width: 100%;
+    margin-top: 0;
+    background: $white;
+    z-index: 100;
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+.jumbotron--home {
+  max-height: 100%;
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  & + .main-content {
+    margin-top: 0;
+  }
+
+  .article__header {
+    padding: $space-outside - $gutter;
+  }
+}
+// .jumbotron__text {
+//   @extend %font-cover;
+//
+//   .container {
+//     margin: 0;
+//   }
+// }
+.aspect-ratio {
+  @include aspect-ratio(16, 9);
+  overflow: hidden;
+  //&:after,
+  .jumbotron__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    z-index: 1;
+    @include transition(all,$time-home,ease);
+
+    &.is--hide {
+      @include opacity(0);
+      z-index: 1;
+      @include transition(all,$time-home,ease);
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      //animation: boxcover-show-hide 10s ease forwards; // if use after
+      //animation: boxcover-show 6s ease forwards;
+      //animation-iteration-count:1;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .jumbotron__img,
+    .jumbotron__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      vertical-align: top;
+      z-index: 1;
+    }
+  }
+
+  .jumbotron__img,
+  .jumbotron__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: top;
+    z-index: 1;
+    //animation: img-show 3s ease forwards;
+    //animation: boxtext-show 10s ease forwards;
+  }
+
+  .jumbotron__text {
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+    @include transition(opacity,1s,ease);
+
+    .jumbotron--with-multitext & {
+      opacity: 0;
+
+      &:first-child {
+        opacity: 1;
+      }
+    }
+  }
+
+  .jumbotron__text--showing {
+    opacity: 1;
+  }
+}
+//Cycles
+/////////////////////////////////////////////////////////////
+@keyframes xfade {
+  0% {
+    @include opacity(1);
+  }
+
+  5.5% {
+    @include opacity(1);
+  }
+
+  12.5% {
+    @include opacity(0);
+  }
+
+  90% {
+    @include opacity(0);
+  }
+
+  100% {
+    @include opacity(1);
+  }
+}
+
+@keyframes xfadeHome {
+  0% {
+    @include opacity(1);
+  }
+
+  30% {
+    @include opacity(1);
+  }
+
+  35% {
+    @include opacity(0);
+  }
+
+  95% {
+    @include opacity(0);
+  }
+
+  100% {
+    @include opacity(1);
+  }
+}
+//JUMBOTRON HOME PAGE
+/////////////////////////////////////////////////////////////
+.home {
+  overflow: hidden;
+}
+
+.jumbotron--home {
+  overflow: visible;
+
+  // @media (min-width: 767px) {
+  //   overflow: visible;
+  // }
+}
+
+.home__container {
+  width: 100vw;
+  //width: 90vw;
+  height: 56.25vw; //100/56.25 = 1.778
+  //height: 50.625vw;//16/9*90 = 50.625
+  //max-height: 100vh;
+  max-height: 100vh;
+  max-width: 177.78vh; // 16/9 = 1.778
+  //max-width: 160vh;// 16/9*90=160
+  margin: 0 auto auto;
+  position: absolute;
+  top: 0;
+  bottom: 0; // vertical center
+  left: 0;
+  right: 0; // horizontal center
+
+  .touch & {
+    overflow: hidden;
+  }
+
+  .header {
+    margin-top: -52px;
+    overflow: visible;
+    @include transition;
+  }
+
+  .no-touch & {
+    .header {
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: $bg-header;
+        z-index: 1;
+      }
+
+      &:before {
+        left: -100vw;
+      }
+
+      &:after {
+        right: -100vw;
+      }
+    }
+  }
+
+  .big {
+    width: 96%;
+    max-width: 1000px;
+    background: none;
+    height: 0;
+    margin: auto;
+    padding-left: $space-outside;
+    padding-right: $space-outside;
+    position: relative;
+    z-index: 100;
+  }
+
+  .slides {
+    padding-bottom: 100px;
+  }
+
+  .jumbotron__media {
+    overflow: hidden;
+  }
+
+  .aspect-ratio {
+    overflow: visible;
+  }
+  // @media (min-width: 767px) and (max-width: 1033px) {
+  //   .header {
+  //     bottom: 60px;
+  //   }
+  //   &:before,
+  //   &:after {
+  //     height: 62px;
+  //     //bottom: -68px;
+  //   }
+  // }
+}

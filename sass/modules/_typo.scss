@@ -1,0 +1,192 @@
+// Typo
+//////////////////////////////////////////////////////////////////////////////
+$light: 300;
+$bold: bold;
+//FONTS.COM
+//////////////////////////////////////////////////////////////////////////////
+@font-face {
+    font-family: "AktivGrotesk";
+    src: url("../font/font/a5cd7b48-fe3c-4c5d-89d2-575ba3e0bbe8.eot?#iefix");
+    src: url("../font/font/a5cd7b48-fe3c-4c5d-89d2-575ba3e0bbe8.eot?#iefix") format("eot"), url("../font/font/43e12dfb-339e-40c1-ad28-6aff091d34e7.woff2") format("woff2"), url("../font/font/06017a84-551c-401f-b300-ce5b0ecdba61.woff") format("woff"), url("../font/font/3eca8fb4-ba4f-4797-adaa-618e0dd58a3c.ttf") format("truetype"), url("../font/font/b63cf2f3-6b55-4f75-8796-761df0cc7c62.svg#b63cf2f3-6b55-4f75-8796-761df0cc7c62") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AktivGrotesk";
+    src: url("../font/font/4485f6f9-b7e6-4a2d-a2e5-19dc891e1bdd.eot?#iefix");
+    src: url("../font/font/4485f6f9-b7e6-4a2d-a2e5-19dc891e1bdd.eot?#iefix") format("eot"), url("../font/font/91ca2f3c-456a-40cd-ab5d-4828c90e6988.woff2") format("woff2"), url("../font/font/ec3dc2a7-f2bc-464e-b155-b11d84cbe546.woff") format("woff"), url("../font/font/bde35372-e501-4b62-bb8a-4335dc048618.ttf") format("truetype"), url("../font/font/c4686ca9-fb00-4304-8b6a-49eca8b47151.svg#c4686ca9-fb00-4304-8b6a-49eca8b47151") format("svg");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "AktivGrotesk";
+    src: url("../font/font/e5b10466-0a77-4de7-8499-db235184e968.eot?#iefix");
+    src: url("../font/font/e5b10466-0a77-4de7-8499-db235184e968.eot?#iefix") format("eot"), url("../font/font/17d11d65-4e0e-4681-88ab-4c5faa2fc3bf.woff2") format("woff2"), url("../font/font/b58d0e0d-fcd2-4365-bd63-c85a8ae3ed4d.woff") format("woff"), url("../font/font/d5d49499-3679-4b89-9ef5-f5a4b4dd7f8a.ttf") format("truetype"), url("../font/font/943552cc-7727-42fd-b8e1-a79a1829746d.svg#943552cc-7727-42fd-b8e1-a79a1829746d") format("svg");
+    font-weight: $bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AktivGrotesk";
+    src: url("../font/font/cb4b4131-29a4-4e5f-93eb-fd81a284aaca.eot?#iefix");
+    src: url("../font/font/cb4b4131-29a4-4e5f-93eb-fd81a284aaca.eot?#iefix") format("eot"), url("../font/font/e74ec06a-6888-429c-a491-ec3116c7a392.woff2") format("woff2"), url("../font/font/830ff474-15c9-4e57-8d3b-0b2cbdbac58b.woff") format("woff"), url("../font/font/b975b932-1ec2-453b-87f9-0611681800d7.ttf") format("truetype"), url("../font/font/4afbd0ef-2348-4be8-b86f-2310b7e12758.svg#4afbd0ef-2348-4be8-b86f-2310b7e12758") format("svg");
+    font-weight: $bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Calvert";
+    src: url("../font/font/a576c835-3760-4caf-a352-9d2590efb60b.eot?#iefix");
+    src: url("../font/font/a576c835-3760-4caf-a352-9d2590efb60b.eot?#iefix") format("eot"), url("../font/font/accb034c-1a9c-48f6-bf38-40ae205e80c9.woff2") format("woff2"), url("../font/font/0e2bd249-49a7-497a-8c09-4c399eac0012.woff") format("woff"), url("../font/font/0e65bb36-7960-4087-b811-4b5a5c238be9.ttf") format("truetype"), url("../font/font/e8a52c47-5328-42ca-8899-5674a10d7593.svg#e8a52c47-5328-42ca-8899-5674a10d7593") format("svg");
+    font-weight: $light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Calvert";
+    src: url("../font/font/6f04cb53-3d17-4738-be7f-125b90c7081c.eot?#iefix");
+    src: url("../font/font/6f04cb53-3d17-4738-be7f-125b90c7081c.eot?#iefix") format("eot"), url("../font/font/672b344b-3d84-4220-9478-085a087b3339.woff2") format("woff2"), url("../font/font/11102bd0-38c8-4d60-a5f9-d422573f08dc.woff") format("woff"), url("../font/font/77af9e05-c51d-4bef-9d6c-74430d02a2f6.ttf") format("truetype"), url("../font/font/279dd6a9-ee9b-4e00-ba50-315c3dcf1e8c.svg#279dd6a9-ee9b-4e00-ba50-315c3dcf1e8c") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Calvert";
+    src: url("../font/font/6571c13d-e1f0-4876-bdff-98529f20937b.eot?#iefix");
+    src: url("../font/font/6571c13d-e1f0-4876-bdff-98529f20937b.eot?#iefix") format("eot"), url("../font/font/98052579-0648-4e02-953f-ba7b46d13355.woff2") format("woff2"), url("../font/font/2bc28ff1-0120-47a3-8c4e-5864479e1a55.woff") format("woff"), url("../font/font/7d06e72d-5ebd-4e67-be44-8bffeb9a09ba.ttf") format("truetype"), url("../font/font/6f37f93f-ae97-4aee-804f-1e140267e040.svg#6f37f93f-ae97-4aee-804f-1e140267e040") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url("../font/icomoon/icomoon.eot?pxnoqz");
+    src: url("../font/icomoon/icomoon.eot?pxnoqz#iefix") format("embedded-opentype"), url("../font/icomoon/icomoon.woff2?pxnoqz") format("woff2"), url("../font/icomoon/icomoon.ttf?pxnoqz") format("truetype"), url("../font/icomoon/icomoon.woff?pxnoqz") format("woff"), url("../font/icomoon/icomoon.svg?pxnoqz#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+//FONT Calvert modified by Jannuzzi Smith
+///////////////////////////////////////////////
+@font-face {
+    font-family: "calvert_pma_stdbold";
+    src: url('../font/modified/calvert-pma_calt-webfont.eot');
+    src: url('../font/modified/calvert-pma_calt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/modified/calvert-pma_calt-webfont.woff2') format('woff2'),
+         url('../font/modified/calvert-pma_calt-webfont.woff') format('woff'),
+         url('../font/modified/calvert-pma_calt-webfont.ttf') format('truetype'),
+         url('../font/modified/calvert-pma_calt-webfont.svg#calvert_pma_stdbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+//FONT EXTEND
+///////////////////////////////////////////////
+
+%font-small {
+    font-size: $font-size-small;
+    line-height: 135%;
+}
+
+%font-base {
+    font-size: $font-size-base;
+    line-height: 135%;
+}
+
+%font-large {
+    font-size: $font-size-large;
+    line-height: 125%;
+}
+
+%font-cover {
+    font-size: $font-size-cover;
+    font-size: 5.5vw;
+    line-height: 110%;
+}
+
+//ICOMOON
+///////////////////////////////////////////////
+@font-face {
+    font-family: 'icomoon';
+    src:url('../font/icomoon/icomoon.eot?t38y1r');
+    src:url('../font/icomoon/icomoon.eot?t38y1r#iefix') format('embedded-opentype'),
+        url('../font/icomoon/icomoon.woff2?t38y1r') format('woff2'),
+        url('../font/icomoon/icomoon.ttf?t38y1r') format('truetype'),
+        url('../font/icomoon/icomoon.woff?t38y1r') format('woff'),
+        url('../font/icomoon/icomoon.svg?t38y1r#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-circle-up:before {
+    content: "\e808";
+}
+.icon-circle-right:before {
+    content: "\e809";
+}
+.icon-circle-down:before {
+    content: "\e80a";
+}
+.icon-circle-left:before {
+    content: "\e80b";
+}
+.icon-facebook:before {
+    content: "\e800";
+}
+.icon-facebook2:before {
+    content: "\e801";
+}
+.icon-facebook3:before {
+    content: "\e802";
+}
+.icon-twitter:before {
+    content: "\e803";
+}
+.icon-twitter2:before {
+    content: "\e804";
+}
+.icon-twitter3:before {
+    content: "\e805";
+}
+.icon-linkedin:before {
+    content: "\e806";
+}
+.icon-linkedin2:before {
+    content: "\e807";
+}
+.icon-mouse:before {
+    content: "\e11e";
+}
+.icon-check:before {
+    content: "\e206";
+}
+.icon-chevron_left:before {
+    content: "\e207";
+}
+.icon-chevron_right:before {
+    content: "\e208";
+}
+.icon-close:before {
+    content: "\e209";
+}
+.icon-expand_less:before {
+    content: "\e20a";
+}
+.icon-expand_more:before {
+    content: "\e20b";
+}

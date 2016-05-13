@@ -1,0 +1,30 @@
+[{
+    "videoID": null,
+    "bgImg": "http://lorempixel.com/1280/720/sports/1/",
+    "slides": [{
+        "descriptions": ["Text Text 1.1", "Lorem ipsum", "Lorem ipsum dolor"],
+        "showSlide": 0,
+        "translateSlide": 2,
+        "bgcolor":1
+    }, {
+        "descriptions": ["Sed ut perspiciatis unde", "Test texts 2.2", "Nemo enim ipsam"],
+        "showSlide": 4,
+        "translateSlide": 6,
+        "bgcolor":2
+    }, {
+        "descriptions": ["Li Europan lingues", "On refusa continuar", "Textss 3.3"],
+        "showSlide": 6,
+        "translateSlide": 8,
+        "bgcolor":3
+    }, {
+        "descriptions": ["Far far away,", "behind the word mountains", "far from the countries"],
+        "showSlide": 10,
+        "translateSlide": 12,
+        "bgcolor":4
+    }, {
+        "descriptions": ["A wonderful serenity", "has taken possession", "of my entire soul"],
+        "showSlide": 12,
+        "translateSlide": 14,
+        "bgcolor":5
+    }]
+}]

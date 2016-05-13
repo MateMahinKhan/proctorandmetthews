@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Richard Smith -- Graphic Designer -- @jannuzzismith
+    Geoffroy Baylaender -- Frontender -- @oeg87
+    Richard Harris -- Backender -- 
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr

@@ -1,0 +1,30 @@
+//SLIDESHOW
+//////////////////////////////////////////////////////////////////////////////
+.gallery--slideshow {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    .gallery__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width:100%;
+        max-width:100%;
+        height:auto;
+        border:0;
+        @include opacity(0);
+        @include transition(opacity,2s,ease);
+        z-index: 1;
+        outline:0;
+        &:hover {
+            border:0;
+        }
+    }
+    .show {
+        position: relative;
+        z-index:5;
+        @include opacity(1); 
+        @include transition(opacity,2s,ease);
+    }
+}

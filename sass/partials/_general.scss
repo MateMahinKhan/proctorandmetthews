@@ -1,0 +1,132 @@
+//GENERL
+//////////////////////////////////////////////////////////////////////////////
+.columns--3 {
+  @include column-count(1);
+
+  @include breakpoint(sm-min) {
+    @include column-count(2);
+  }
+
+  @include breakpoint(ml-min) {
+    @include column-count(3);
+  }
+}
+
+.columns--2 {
+  @include column-count(1);
+
+  @include breakpoint(sm-min) {
+    @include column-count(2);
+  }
+
+  &.col--6 .list--no {
+    padding-top: $gutter;
+
+    @include breakpoint(sm-min) {
+      padding-top: 0;
+      padding-left: 6+$gutter;
+    }
+  }
+}
+
+.main-content {
+  margin-top: 62+$space-bottom;
+  background-color: $body-bg;
+}
+
+.header--top {
+  &+ .content {
+    margin-top: -1*$gutter2 +2;
+  }
+}
+//CONTENT
+//=========================================
+.content {
+  // margin-top: $space-bottom;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.cssanimations {
+  .jumbotron + .row,
+  .article__content,
+  .box--skeleton,
+  .related,
+  .skeleton--square {
+    opacity: 0;
+    animation: fadeInContent ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 1.2s;
+  }
+
+  body:not(.home) .jumbotron__media {
+    opacity: 0;
+    animation: fadeInContent ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 1.2s;
+  }
+}
+
+.iframe__wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+//LINKS
+//=========================================
+.link {
+  display: inline-block;
+}
+
+.article__content {
+  a {
+    border-bottom: 1px $s-dotted;
+  }
+
+  a:active,
+  a:hover {
+    border-bottom: 1px $s-dotted;
+  }
+}
+
+.dl {
+  a:active,
+  a:hover {
+    border-bottom: 1px $s-dotted;
+  }
+}
+
+[class*="link--"] {
+  & {
+    border-bottom: 1px $s-dotted;
+  }
+
+  &:active,
+  &:hover {
+    border-bottom: 1px $s-dotted;
+  }
+}
+
+.title--color {
+  @include transition;
+}

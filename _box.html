@@ -1,0 +1,854 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Box</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/picturefill.js" async></script>
+    <style>
+    .test__title {
+        margin: 2em 1em 1em 1em;
+        padding: 5px;
+        background: #272822;
+        text-align: center;
+        color: white;
+        font-weight: normal;
+    }
+    
+    .test__text {
+        margin: 0 1em 1em 1em;
+        padding: 5px;
+        text-align: center;
+    }
+    
+    code {
+        color: #53d2ef;
+        padding: 0 10px;
+    }
+    
+    .test__text code {
+        color: #5355EF;
+    }
+    </style>
+</head>
+
+<body class="test__body">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="test__container">
+        <!--Thumbnail + content, 3 col
+        _______________________________-->
+        <h1 class="test__title">Thumbnail + content (3 col), <code>skeleton--square</code></h1>
+        <p class="test__text">
+            Pictures same size
+        </p>
+        <div class="row row--9">
+            <div class="container box font--small skeleton--square">
+                <ul class="list--no gallery--col">
+                    <li class="list__item col--3">
+                        <a class="gallery__link link--5" href="#">
+                            <figure class="figure">
+                                <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="http://placehold.it/277x156/fd0/000, http://placehold.it/277x156/fd0/000 x2" media="(min-width: 768px)">
+                                        <source srcset="http://placehold.it/680x390/fdd/000, http://placehold.it/1360x780/fdd/000 x2" media="(min-width: 400px)">
+                                        <source srcset="http://placehold.it/336x190/999/fff, http://placehold.it/672x380/999/fff x2" media="(min-width: 320px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img class="gallery__img" src="http://placehold.it/277x156/fd0/000" alt="Title of project" />
+                                </picture>
+                                <figcaption class="figure__caption">
+                                    <strong class="title--color">Stephen Proctor</strong>
+                                    <br />
+                                    <span class="description">BA (Hons) DipArch MA RIBA FRSA
+                                        </span>
+                                    <span class="description role">Architect, Director
+                                        </span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="list__item col--3">
+                        <a class="gallery__link link--5" href="#">
+                            <figure class="figure">
+                                <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="http://placehold.it/277x156/fd0/000, http://placehold.it/277x156/fd0/000 x2" media="(min-width: 768px)">
+                                        <source srcset="http://placehold.it/680x390/fdd/000, http://placehold.it/1360x780/fdd/000 x2" media="(min-width: 400px)">
+                                        <source srcset="http://placehold.it/336x190/999/fff, http://placehold.it/672x380/999/fff x2" media="(min-width: 320px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img class="gallery__img" src="http://placehold.it/277x156/fd0/000" alt="Title of project" />
+                                </picture>
+                                <figcaption class="figure__caption">
+                                    <strong class="title--color">Andrew Matthews</strong>
+                                    <br />
+                                    <span class="description">BA (Hons) DipArch MA RIBA FRSA
+                                        </span>
+                                    <span class="description role">Architect, Director
+                                        </span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="list__item col--3">
+                        <a class="gallery__link link--5" href="#">
+                            <figure class="figure">
+                                <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="http://placehold.it/277x156/fd0/000, http://placehold.it/277x156/fd0/000 x2" media="(min-width: 768px)">
+                                        <source srcset="http://placehold.it/680x390/fdd/000, http://placehold.it/1360x780/fdd/000 x2" media="(min-width: 400px)">
+                                        <source srcset="http://placehold.it/336x190/999/fff, http://placehold.it/672x380/999/fff x2" media="(min-width: 320px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img class="gallery__img" src="http://placehold.it/277x156/fd0/000" alt="Title of project" />
+                                </picture>
+                                <figcaption class="figure__caption">
+                                    <strong class="title--color">Georgina Bignold</strong>
+                                    <br />
+                                    <span class="description">BA (Hons) DipArch MA RIBA FRSA
+                                        </span>
+                                    <span class="description role">Architect, Associate Director
+                                        </span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="list__item col--3">
+                        <a class="gallery__link link--5" href="#">
+                            <figure class="figure">
+                                <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="http://placehold.it/277x156/fd0/000, http://placehold.it/277x156/fd0/000 x2" media="(min-width: 768px)">
+                                        <source srcset="http://placehold.it/680x390/fdd/000, http://placehold.it/1360x780/fdd/000 x2" media="(min-width: 400px)">
+                                        <source srcset="http://placehold.it/336x190/999/fff, http://placehold.it/672x380/999/fff x2" media="(min-width: 320px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img class="gallery__img" src="http://placehold.it/277x156/fd0/000" alt="Title of project" />
+                                </picture>
+                                <figcaption class="figure__caption">
+                                    <strong class="title--color">Andrew Cadey</strong>
+                                    <br />
+                                    <span class="description">BA (Hons) DipArch MA RIBA FRSA
+                                        </span>
+                                    <span class="description role">Architect, Director
+                                        </span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--DL + 2 columns
+        _______________________________-->
+        <h1 class="test__title">DL + 2 columns</h1>
+        <p class="test__text">
+            Two list: DL + UL
+        </p>
+        <div class="row row--9">
+            <div class="container box font--small">
+                <div class="col--3 box__content">
+                    <dl class="dl dl--inline dl--large">
+                        <dt class="dl__dt">Type:</dt>
+                        <dd class="dl__dd">
+                            education, university building
+                        </dd>
+                        <dt class="dl__dt">Location:</dt>
+                        <dd class="dl__dd">
+                            Location: Priory Quarter, Hastings, between the station and the town centre
+                        </dd>
+                        <dt class="dl__dt">Client:</dt>
+                        <dd class="dl__dd">
+                            University of Brighton / Sea Space Ltd
+                        </dd>
+                        <dt class="dl__dt">Contract value:</dt>
+                        <dd class="dl__dd">
+                            £10 million
+                        </dd>
+                        <dt class="dl__dt">Project status:</dt>
+                        <dd class="dl__dd">
+                            Completed
+                        </dd>
+                        <dt class="dl__dt">Area:</dt>
+                        <dd class="dl__dd">
+                            2,682 m<sup>2</sup>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col--6 columns--2 box__content">
+                    <ul class="list--no list--inline">
+                        <li><strong>Awards</strong></li>
+                        <li class="list__item">2005: National Home Builder Award </li>
+                        <li class="list__item">2005: Best Large Housing Development, RIBA National Award </li>
+                        <li class="list__item">2004: Overall Winner, Housing Design Awards</li>
+                        <li class="list__item">2003: Building for Life/Gold Standard </li>
+                        <li class="list__item">2003: International Property Awards (Bentley)/Silver Award/ Best Architecture </li>
+                        <li class="list__item">2002: Britannia National Home Builder Design Award </li>
+                        <li class="list__item">2002: Housing Design Award (DTLR/NHBC/RIBA/RTPI)</li>
+                        <li class="list__item">2002: Housebuilder Award (Housebuilder publication)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--SMALL GALLERY
+        _______________________________-->
+        <h1 class="test__title">Gallery <code>gallery--bottom-align</code> w/o caption</h1>
+        <p class="test__text">
+            <code>box--skeleton</code> add border-bottom title
+            <br /> Picture width fixed, height auto
+        </p>
+        <aside class="row row--8 related">
+            <div class="container box box--skeleton font--small">
+                <div class="col--8 box__header">
+                    <h1 class="box__title">Additional images links</h1>
+                </div>
+                <div class="box__content">
+                    <ul class="list--no gallery gallery--bottom-align">
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--5" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <picture>
+                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                <source srcset="http://placehold.it/106x106/fd0/000, http://placehold.it/212x212/fd0/000 x2" media="(min-width: 768px)">
+                                                <source srcset="http://placehold.it/302x302/fdd/000, http://placehold.it/604x604/fdd/000 x2" media="(min-width: 400px)">
+                                                <source srcset="http://placehold.it/153x153/999/fff, http://placehold.it/306x1000/999/fff x2" media="(min-width: 320px)">
+                                            <!--[if IE 9]></video><![endif]-->
+                                            <img class="gallery__img" src="http://placehold.it/115x115/0d0/000" alt="Title of pciture" />
+                                        </picture>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--5" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <picture>
+                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                <source srcset="http://placehold.it/106x200/fd0/000, http://placehold.it/212x400/fd0/000 x2" media="(min-width: 768px)">
+                                                <source srcset="http://placehold.it/302x500/fdd/000, http://placehold.it/604x1000/fdd/000 x2" media="(min-width: 400px)">
+                                                <source srcset="http://placehold.it/153x250/999/fff, http://placehold.it/306x500/999/fff x2" media="(min-width: 320px)">
+                                            <!--[if IE 9]></video><![endif]-->
+                                            <img class="gallery__img" src="http://placehold.it/115x209/0d0/000" alt="Title of pciture" />
+                                        </picture>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--5" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <picture>
+                                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                <source srcset="http://placehold.it/106x150/fd0/000, http://placehold.it/212x300/fd0/000 x2" media="(min-width: 768px)">
+                                                <source srcset="http://placehold.it/302x420/fdd/000, http://placehold.it/604x840/fdd/000 x2" media="(min-width: 400px)">
+                                                <source srcset="http://placehold.it/153x200/999/fff, http://placehold.it/306x400/999/fff x2" media="(min-width: 320px)">
+                                            <!--[if IE 9]></video><![endif]-->
+                                            <img class="gallery__img" src="http://placehold.it/115x160/0d0/000" alt="Title of pciture" />
+                                        </picture>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!--SMALL GALLERY
+        _______________________________-->
+        <h1 class="test__title">Small gallery <code>gallery--list</code> with caption</h1>
+        <p class="test__text">
+            Picture ratio <strong>16/9</strong>
+            <br /> Content of <code>li</code> raggruped by category.
+            <br/> Name category inside a <code>em</code>, only the first of the each category doesn&rsquo;t have class <code>invisible</code>
+        </p>
+        <nav class="row row--8 related">
+            <div class="container box box--skeleton font--small">
+                <div class="col--8 box__header">
+                    <h1 class="box__title">Related links</h1>
+                </div>
+                <div class="box__content">
+                    <ul class="list--no gallery gallery--list">
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--5" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <img class="gallery__img" src="img/case-studies/related-links/01.jpg" alt="placeholder" />
+                                    </div>
+                                    <figcaption class="figure__caption">
+                                        <em class="category">Projects:</em>
+                                        <!-- ATTENTION: only the first content of the same category has the class .category, the others have .category and .invisible-->
+                                        <strong class="title--color">
+                                                Priory Quarter
+                                            </strong>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--5" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <img class="gallery__img" src="img/case-studies/related-links/02.jpg" alt="placeholder" />
+                                    </div>
+                                    <figcaption class="figure__caption">
+                                        <em class="category invisible">Projects:</em>
+                                        <strong class="title--color">
+                                                One Priory Square
+                                            </strong>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--5" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <img class="gallery__img" src="img/case-studies/related-links/03.jpg" alt="placeholder" />
+                                    </div>
+                                    <figcaption class="figure__caption">
+                                        <em class="category invisible">Projects:</em>
+                                        <strong class="title--color">
+                                                Hastings Priory Quarter Phases 3 &amp; 4
+                                            </strong>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--4" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <img class="gallery__img" src="img/case-studies/related-links/04.jpg" alt="placeholder" />
+                                    </div>
+                                    <figcaption class="figure__caption">
+                                        <em class="category">Practice:</em>
+                                        <strong class="title--color">
+                                                Developing ideas
+                                            </strong>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--1" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <img class="gallery__img" src="img/case-studies/related-links/05.jpg" alt="placeholder" />
+                                    </div>
+                                    <figcaption class="figure__caption">
+                                        <em class="category">External link:</em>
+                                        <strong class="title--color">
+                                                Architects Journal
+                                            </strong>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col--1 col__sm--4 list__item">
+                            <a class="gallery__link link--1" href="#">
+                                <figure class="figure">
+                                    <div class="gallery__img__content">
+                                        <!--c-->
+                                    </div>
+                                    <figcaption class="figure__caption">
+                                        <em class="category">Download:</em>
+                                        <strong class="title--color">
+                                                Press release
+                                            </strong>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Box with 1+2 columns list content
+        _______________________________-->
+        <div class="row row--9">
+            <div class="container box font--small">
+                <div class="col--3 box__content">
+                    <dl class="dl dl--inline dl--large">
+                        <dt class="dl__dt">Type:</dt>
+                        <dd class="dl__dd">
+                            education, university building
+                        </dd>
+                        <dt class="dl__dt">Location:</dt>
+                        <dd class="dl__dd">
+                            Location: Priory Quarter, Hastings, between the station and the town centre
+                        </dd>
+                        <dt class="dl__dt">Client:</dt>
+                        <dd class="dl__dd">
+                            University of Brighton / Sea Space Ltd
+                        </dd>
+                        <dt class="dl__dt">Contract value:</dt>
+                        <dd class="dl__dd">
+                            £10 million
+                        </dd>
+                        <dt class="dl__dt">Project status:</dt>
+                        <dd class="dl__dd">
+                            Completed
+                        </dd>
+                        <dt class="dl__dt">Area:</dt>
+                        <dd class="dl__dd">
+                            2,682 m<sup>2</sup>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col--6 columns--2 box__content">
+                    <ul class="list--no list--inline">
+                        <li><strong>Awards</strong></li>
+                        <li class="list__item">2005: National Home Builder Award </li>
+                        <li class="list__item">2005: Best Large Housing Development, RIBA National Award </li>
+                        <li class="list__item">2004: Overall Winner, Housing Design Awards</li>
+                        <li class="list__item">2003: Building for Life/Gold Standard </li>
+                        <li class="list__item">2003: International Property Awards (Bentley)/Silver Award/ Best Architecture </li>
+                        <li class="list__item">2002: Britannia National Home Builder Design Award </li>
+                        <li class="list__item">2002: Housing Design Award (DTLR/NHBC/RIBA/RTPI)</li>
+                        <li class="list__item">2002: Housebuilder Award (Housebuilder publication)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Box with 3 columns list content
+        _______________________________-->
+        <div class="color--3">
+            <h1 class="test__title">Box with 3 columns list content</h1>
+            <div class="row row--9">
+                <div class="container box box--rounded font--small">
+                    <div class="col--9 box__header border-bottom--dotted">
+                        <h1 class="box__title">Award</h1>
+                    </div>
+                    <div class="col--9 box__content columns--3">
+                        <ul class="list--no list--inline">
+                            <li class="list__item">2005: National Home Award</li>
+                            <li class="list__item">2005: National Home Award Lorem ipsum Lore ipsum Lorem Ipsum</li>
+                            <li class="list__item">2005: National Home Award Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                            <li class="list__item">2005: National Home Award</li>
+                            <li class="list__item">2005: National Home Award</li>
+                            <li class="list__item">2003: International Property Awards (Bentley)/Silver Award/Best Architecture</li>
+                            <li class="list__item">2002: Housebuilder Award (Housebuilder publication)</li>
+                            <li class="list__item">2005: National Home Award</li>
+                            <li class="list__item">2005: National Home Award</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BOX
+        _______________________________-->
+        <div class="color--3">
+            <h1 class="test__title">Box with 3 columns text content</h1>
+            <p class="test__text">
+                With <code>box--rounded</code>
+            </p>
+            <div class="row row--9">
+                <div class="container box box--rounded font--small">
+                    <div class="col--9 box__header border-bottom--dotted">
+                        <h1 class="box__title">Text</h1>
+                    </div>
+                    <div class="col--9 box__content columns--3">
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta provident deserunt eum ut magni dolorum sunt doloremque?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta provident deserunt eum ut magni dolorum sunt doloremque, reiciendis dolor qui ab, debitis esse quas enim unde fugiat a? Distinctio, porro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Editorial content 1/3 + 2/3
+        _______________________________-->
+        <div class="color--3">
+            <h1 class="test__title">Editorial content 1/3 + 2/3 <code>.row--skeleton</code> and <code>.box--rounded</code></h1>
+            <p class="test__text">
+                Content semantic inversed, before aside and after main content (don't used)
+            </p>
+            <div class="row row--9 row--skeleton article__content">
+                <div class="container box box--rounded">
+                    <div class="col--3 box__aside col--left">
+                        <figure class="figure ">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="http://placehold.it/277x156/fd0/000, http://placehold.it/277x156/fd0/000 x2" media="(min-width: 768px)">
+                                    <source srcset="http://placehold.it/680x390/fdd/000, http://placehold.it/1360x780/fdd/000 x2" media="(min-width: 400px)">
+                                    <source srcset="http://placehold.it/336x190/999/fff, http://placehold.it/672x380/999/fff x2" media="(min-width: 320px)">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img class="img--responsive" src="http://placehold.it/277x156/fd0/000" alt="Title of project" />
+                            </picture>
+                            <figcaption class="figure__caption">
+                                An image. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            </figcaption>
+                        </figure>
+                        <figure class="figure">
+                            <div class="video__wrapper">
+                                <iframe width="420" height="315" src="https://www.youtube.com/embed/0ptANIBWjxM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <figcaption class="figure__caption">
+                                A embeded video
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col--6 box__content col--right">
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--5" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </p>
+                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                        <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+                        <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.</p>
+                        <p>Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Editorial reverse content 1/3 + 2/3
+        _______________________________-->
+        <div class="color--3">
+            <h1 class="test__title">Editorial <code>.row--skeleton</code> and <code>.row--reverse</code> content 1/3 + 2/3</h1>
+            <p class="test__text">
+                Content with reverse, with correct semantic: before main content and after the aside content
+            </p>
+            <div class="row row--9 row--reverse row--skeleton article__content">
+                <div class="container box">
+                    <div class="col--6 box__content col--right">
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--5" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--5" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--5" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </p>
+                    </div>
+                    <div class="col--3 box__aside col--left">
+                        <figure class="figure ">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="http://placehold.it/277x156/fd0/000, http://placehold.it/277x156/fd0/000 x2" media="(min-width: 768px)">
+                                    <source srcset="http://placehold.it/680x390/fdd/000, http://placehold.it/1360x780/fdd/000 x2" media="(min-width: 400px)">
+                                    <source srcset="http://placehold.it/336x190/999/fff, http://placehold.it/672x380/999/fff x2" media="(min-width: 320px)">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img class="img--responsive" src="http://placehold.it/277x156/fd0/000" alt="Title of project" />
+                            </picture>
+                            <figcaption class="figure__caption">
+                                An image. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            </figcaption>
+                        </figure>
+                        <figure class="figure">
+                            <div class="video__wrapper">
+                                <iframe width="420" height="315" src="https://www.youtube.com/embed/0ptANIBWjxM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <figcaption class="figure__caption">
+                                A embeded video
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="color--3">
+            <h1 class="test__title">Editorial <code>.row--skeleton</code> and <code>.row--reverse</code> content 1/3 + 2/3</h1>
+            <p class="test__text">
+                Content with reverse, with correct semantic: before main content and after the aside content
+            </p>
+            <div class="row row--9 row--reverse row--skeleton article__content">
+                <div class="container box">
+                    <div class="col--3 box__aside col--right">
+                        <dl class="dl dl--large font--small">
+                            <dt class="dl__dt">Qualifications</dt>
+                            <dd class="dl__dd">RIBA</dd>
+                            <dd class="dl__dd">MA – Sheffield University</dd>
+                            <dd class="dl__dd">Dip Arch – Sheffield University</dd>
+                            <dt class="dl__dt">Academic Appointments</dt>
+                            <dd class="dl__dd">2009–ongoing: Member if the Essex Design Initiative, Design Review Panel</dd>
+                            <dt class="dl__dt">Consultancy Appointments</dt>
+                            <dd class="dl__dd">2009–ongoing: Member of the Essex Design Initiative Review Panel</dd>
+                        </dl>
+                    </div>
+                    <div class="col--6 box__content col--left">
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--5" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--5" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </p>
+                        <p>
+                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Editorial content 1/3 + 2/3(no border)
+        _______________________________-->
+        <div class="color--3">
+            <h1 class="test__title">Editorial content 1/3 + 2/3 (no border and no skeleton) </h1>
+            <div class="row row--9 article__content">
+                <div class="container box box--no-border">
+                    <div class="col--3 box__aside">
+                        <figure class="figure ">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="http://placehold.it/277x156/fd0/000, http://placehold.it/277x156/fd0/000 x2" media="(min-width: 768px)">
+                                    <source srcset="http://placehold.it/680x390/fdd/000, http://placehold.it/1360x780/fdd/000 x2" media="(min-width: 400px)">
+                                    <source srcset="http://placehold.it/336x190/999/fff, http://placehold.it/672x380/999/fff x2" media="(min-width: 320px)">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img class="img--responsive" src="http://placehold.it/277x156/fd0/000" alt="Title of project" />
+                            </picture>
+                            <figcaption class="figure__caption">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum enim nesciunt quasi, iure suscipit voluptatibus deserunt pariatur molestias, eaque, ab officia aliquam deleniti quidem aperiam! Accusantium commodi autem, rerum modi?
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col--6 box__content">
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--1" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--2" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--3" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--4" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--6" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--7" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Editorial content 2/3 + 1/3
+        _______________________________->
+        <div class="color--3">
+            <h1 class="test__title">Editorial content 2/3 + 1/3 <code>article__content--reverse</code></h1>
+            <p class="test__text">
+                People template
+            </p>
+            <div class="row row--9">
+                <div class="container article__content article__content--reverse box">
+                    <div class="col--6 font--base">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </p>
+                    </div>
+                    <div class="col--3 box__content font--small">
+                        <p>
+                            Lorem ipsum dolor sit amet, <a class="link--5" href="#">consectetur adipisicing elit</a>. Eaque earum, debitis iusto hic sed officiis eveniet rem odit harum natus adipisci eius at dolorem fuga, expedita pariatur placeat veniam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </p>
+                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                        <dl class="dl dl--large">
+                            <dt class="dl__dt">Qualifications</dt>
+                            <dd class="dl__dd">RIBA</dd>
+                            <dd class="dl__dd">MA – Sheffield University</dd>
+                            <dd class="dl__dd">Dip Arch – Sheffield University</dd>
+                            <dt class="dl__dt">Academic Appointments</dt>
+                            <dd class="dl__dd">2009–ongoing: Member if the Essex Design Initiative, Design Review Panel</dd>
+                            <dt class="dl__dt">Consultancy Appointments</dt>
+                            <dd class="dl__dd">2009–ongoing: Member of the Essex Design Initiative Review Panel</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        -->
+        <!--Header: intro + details
+        _______________________________-->
+        <div class="color--3">
+            <h1 class="test__title">Header: intro + details</h1>
+            <p class="test__text">
+                Not longer available
+            </p>
+            <div class="row row--9">
+                <div class="container article__header box box--rounded">
+                    <div class="box__col--2">
+                        <div class="box__col--1 border-right--dotted ">
+                            <div class="box__col__content--1">
+                                <h1 class="box__title">University of Brighton in Hastings</h1>
+                                <p class="box__intro">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consectetur beatae nobis, quia, autem quas est. Nihil et non rem molestiae, aliquid quidem natus perferendis voluptatem laudantium possimus, quis officiis.
+                                </p>
+                            </div>
+                            <div class="box__content box__col__content--2 font--small">
+                                <dl class="dl dl--inline">
+                                    <dt class="dl__dt">Title:</dt>
+                                    <dd class="dl__dd">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero saepe commodi in earum aspernatur, numquam vel beatae officiis perferendis, nam cupiditate quo illo aliquam ad provident voluptas sint libero necessitatibus.
+                                    </dd>
+                                    <dt class="dl__dt">Title:</dt>
+                                    <dd class="dl__dd">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero saepe commodi in earum aspernatur.
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header: intro + personal details
+        _______________________________-->
+        <div class="color--6">
+            <h1 class="test__title">Header: intro + personal details</h1>
+            <p class="test__text">
+                Not longer available
+            </p>
+            <div class="row row--9">
+                <div class="container article__header box box--rounded">
+                    <div class="box__col--2">
+                        <div class="box__col--1 border-right--dotted ">
+                            <div class="box__col__content--1">
+                                <h1 class="box__title">Solmaz Zeidi</h1>
+                                <p class="box__intro">
+                                    BASc, BAS (Hons)
+                                </p>
+                            </div>
+                            <div class="box__content box__col__content--2 font--small">
+                                <dl class="dl dl--inline">
+                                    <dt class="dl__dt">
+                                        Discipline:
+                                    </dt>
+                                    <dd class="dl__dd">
+                                        Architect
+                                    </dd>
+                                    <dt class="dl__dt">
+                                        Position:
+                                    </dt>
+                                    <dd class="dl__dd">
+                                        Associate
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header: intro + filter
+        _______________________________-->
+        <div class="color--4">
+            <h1 class="test__title">Header: intro + filter</h1>
+            <p class="test__text">
+                Not longer available
+            </p>
+            <div class="row row--9">
+                <div class="container article__header box box--rounded">
+                    <div class="box__col--2">
+                        <div class="box__col--1 border-right--dotted ">
+                            <div class="box__col__content--1">
+                                <h1 class="box__title">Projects</h1>
+                                <p class="box__intro">
+                                    An extensive portfolio of completed work demonstrating a focused commitment to imaginative and appropriate designs combining a regard for historical contexts and cultural identities with the need to create a socially and environmentally responsive architecture
+                                </p>
+                            </div>
+                            <div class="box__content box__col__content--2 font--small">
+                                <dl class="dl dl--invert">
+                                    <dt class="dl__dt">Filter:</dt>
+                                    <dd class="dl__dd">
+                                        <a href="#">Arts, Education and Health</a>
+                                    </dd>
+                                    <dd class="dl__dd">
+                                        <a class="link--4 is-active" href="#">Commercial</a>
+                                    </dd>
+                                    <dd class="dl__dd">
+                                        <a href="#">Residential</a>
+                                    </dd>
+                                    <dd class="dl__dd">
+                                        <a href="#">Sports</a>
+                                    </dd>
+                                    <dt class="dl__dt">Sort:</dt>
+                                    <dd class="dl__dd">
+                                        <a href="#">Alphabetic</a>
+                                    </dd>
+                                    <dd class="dl__dd">
+                                        <a href="#">Contract value</a>
+                                    </dd>
+                                    <dd class="dl__dd">
+                                        <a href="#">Date completed</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/box-->
+    </div>
+    <!--/ Container-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-2.1.4.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--Font tracking-->
+    <script type="text/javascript">
+    var MTIProjectId = '13f157cc-976e-406b-878f-9b337e42fadd';
+    (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type = 'text/javascript';
+        mtiTracking.async = 'true';
+        mtiTracking.src = 'js/vendor/mtiFontTrackingCode.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mtiTracking);
+    })();
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
