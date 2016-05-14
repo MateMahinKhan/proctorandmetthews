@@ -3211,3 +3211,25 @@ img.mfp-img {
   padding-top: 0; }
 
 /*# sourceMappingURL=main.css.map */
+
+/*-----New style sheet starts here*/
+.slide__header{
+    width: 100%;
+    float: left;
+}
+.slide__text__heading{
+	float:left;
+}
+.slide__text_detail{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:56px;
+}
+.slide__text__detail2{
+	float: left;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
