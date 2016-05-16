@@ -3213,22 +3213,118 @@ img.mfp-img {
 /*# sourceMappingURL=main.css.map */
 
 /*-----New style sheet starts here*/
+.clr{
+	clear:both;
+}
 .slide__header{
     width: 100%;
     float: left;
 }
-.slide__text__heading{
+/*---news---*/
+.slide__heading__news{
 	float:left;
+	display:none;
 }
-.slide__text_detail{
+.slide__detail__news{
 	float:left;
 	font-weight:normal;
 	opacity:0;
 	display:none;
-	font-size:56px;
+	font-size:53px;
 }
-.slide__text__detail2{
-	float: left;
+.slide__detail__news2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+/*---case study---*/
+.slide__heading__casestudy{
+	float:left;
+	display:none;
+}
+.slide__detail__casestudy{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__casestudy2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+/*---projects---*/
+.slide__heading__project{
+	float:left;
+	display:none;
+}
+.slide__detail__project{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__project2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+
+/*---practice---*/
+.slide__heading__practice{
+	float:left;
+	display:none;
+}
+.slide__detail__practice{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__practice2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+/*---people---*/
+.slide__heading__people{
+	float:left;
+	display:none;
+}
+.slide__detail__people{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__people2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+/*---contact---*/
+.slide__heading__contact{
+	float:left;
+	display:none;
+}
+.slide__detail__contact{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__contact2{
+	float: right;
 	font-weight:normal;	
 	opacity:0;
 	display:none;
