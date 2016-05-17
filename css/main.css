@@ -3223,7 +3223,7 @@ img.mfp-img {
 /*---news---*/
 .slide__heading__news{
 	float:left;
-	display:none;
+	display:block;
 }
 .slide__detail__news{
 	float:left;
