@@ -3223,7 +3223,7 @@ img.mfp-img {
 /*---news---*/
 .slide__heading__news{
 	float:left;
-	display:block;
+	display:none;
 }
 .slide__detail__news{
 	float:left;
@@ -3233,7 +3233,7 @@ img.mfp-img {
 	font-size:53px;
 }
 .slide__detail__news2{
-	float: right;
+	float: left;
 	font-weight:normal;	
 	opacity:0;
 	display:none;
