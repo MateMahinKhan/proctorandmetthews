@@ -3219,6 +3219,7 @@ img.mfp-img {
 .slide__header{
     width: 100%;
     float: left;
+    width: 2000px;
 }
 /*---news---*/
 .slide__heading__news{

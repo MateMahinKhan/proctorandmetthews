@@ -1,5 +1,6 @@
 // JavaScript Document
-
+var widthMoved =0;
+var navColors = ['#424242','#B43934','#666867','#1f3957',]
 $( document ).ready(function() {
 	setTimeout(function(){
 	changeLiColor();
@@ -20,9 +21,10 @@ $( document ).ready(function() {
 	function showNextItem(currentSlide){
 		TweenLite.to($sub_slides.eq(currentSlide), 2, {
 		onStart:onStartTween,
-		onStartParams:[".to_show"],
+		onStartParams:[$sub_slides.eq(currentSlide)],
 		opacity:"1",
-		onComplete: moveTextNews
+		onComplete: moveTextNews,
+		onCompleteParams:[$sub_slides.eq(currentSlide)]
 		});
 	}
 	
@@ -33,17 +35,18 @@ $( document ).ready(function() {
         });
     }
 	
-	function moveTextNews(){
-		
+	function moveTextNews(slide){
+		widthMoved = widthMoved + slide.prev().width();
 		TweenLite.to(".slide__header", 2, {
-			x:"-" + $('.width').width(),
+			x:"-" + widthMoved,
 			ease: "Power2.easeInOut",
-			onComplete: changeBGNews2
+			onComplete: changeBGNews2,
+			onCompleteParams:[slide]
 		});
 	
 	}
 	
-	function changeBGNews2(){
+	function changeBGNews2(slide){
 	TweenLite.to(".color--1", 1, {
 	backgroundColor:"#B43934"
 	});
@@ -53,16 +56,16 @@ $( document ).ready(function() {
 	TweenLite.to(".link--2", 2, {
 	color:"#B43934",
 	});
-	TweenLite.to(".width", 2, {
+	TweenLite.to(slide.prev(), 2, {
 	opacity: "0",
 	onComplete: changeTextTwoNews
 	});
 	}
 	
   function changeTextTwoNews(){
-	$(".width").css("display","none");
-	$(".slide__header").css("transform", "matrix(1, 0, 0, 1, 0, 0");
-	$(".slide__header").css("left", $(".width").width());
+	//$(".width").css("display","none");
+	//$(".slide__header").css("transform", "matrix(1, 0, 0, 1, 0, 0)");
+	//$(".slide__header").css("left", $(".width").width());
 	
 	
 	$(".width").removeClass("to_move width");
