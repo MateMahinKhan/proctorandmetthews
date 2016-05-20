@@ -561,7 +561,8 @@ html, .font--base, .social__link, .masonry-grid .col--6 .figure__caption {
 .slides {
   font-size: 60px;
   font-size: 5.5vw;
-  line-height: 110%; }
+  line-height: 110%;
+  }
 
 @font-face {
   font-family: 'icomoon';
@@ -3216,45 +3217,116 @@ img.mfp-img {
 .clr{
 	clear:both;
 }
-#slider_header{
-	position: relative;
-	height: 60px;
-	width:530px;
+.slide__header{
+    width: 100%;
+    float: left;
 }
-#slider_header_two{
-	position: relative;
-	height: 60px;
-	width:530px;
+/*---news---*/
+.slide__heading__news{
+	float:left;
+	display:none;
 }
-#slider_header_three{
-	position: relative;
-	height: 60px;
-	width:530px;
-}
-			
-.slide_animate{
-	height: 60px;
-	position: absolute;
-	left: 0px;
-	font-size: 60px;
-	opacity:0;
-}
-.slide_animate_two{
-	height: 60px;
-	position: absolute;
-	left: 0px;
-	font-size: 60px;
-	opacity:0;
-}
-.slide_animate_three{
-	height: 60px;
-	position: absolute;
-	left: 0px;
-	font-size: 60px;
-	opacity:0;
-}
-.width{
+.slide__detail__news{
+	float:left;
 	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__news2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+/*---case study---*/
+.slide__heading__casestudy{
+	float:left;
+	display:none;
+}
+.slide__detail__casestudy{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__casestudy2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+/*---projects---*/
+.slide__heading__project{
+	float:left;
+	display:none;
+}
+.slide__detail__project{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__project2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
 }
 
-	
+/*---practice---*/
+.slide__heading__practice{
+	float:left;
+	display:none;
+}
+.slide__detail__practice{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__practice2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+/*---people---*/
+.slide__heading__people{
+	float:left;
+	display:none;
+}
+.slide__detail__people{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__people2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
+/*---contact---*/
+.slide__heading__contact{
+	float:left;
+	display:none;
+}
+.slide__detail__contact{
+	float:left;
+	font-weight:normal;
+	opacity:0;
+	display:none;
+	font-size:53px;
+}
+.slide__detail__contact2{
+	float: right;
+	font-weight:normal;	
+	opacity:0;
+	display:none;
+}
