@@ -1,6 +1,4 @@
 $(function(){
-
-	var difference = [8,8,8];
 	var $slides	= $(".slide_animate");
 	var $slides_two	= $(".slide_animate_two");
 	var $slides_three	= $(".slide_animate_three");
@@ -21,9 +19,9 @@ $(function(){
 	$($slides_two.eq(currentSlide_two)).css("opacity","1");
 	$($slides_three.eq(currentSlide_two)).css("opacity","1");
 	
-	TweenLite.delayedCall(2, nextSlide);				
+	TweenLite.delayedCall(2, nextSlide,[[8,8,8]]);				
    
-	function nextSlide(){
+	function nextSlide(param1){
 
 			var minusWidth = [0,0,0];
 			var next = (currentSlide+1);
@@ -31,19 +29,15 @@ $(function(){
 			var next_three = (currentSlide_three+1);
 			
 			if(currentSlide > 1){
-				minusWidth[0] = $($slides.eq(currentSlide-2)).width()+difference[0];
-				minusWidth[1] = $($slides_two.eq(currentSlide_two-2)).width()+difference[1];
-				minusWidth[2] = $($slides_three.eq(currentSlide_three-2)).width()+difference[2];
+				minusWidth[0] = $($slides.eq(currentSlide-2)).width()+param1[0];
+				minusWidth[1] = $($slides_two.eq(currentSlide_two-2)).width()+param1[1];
+				minusWidth[2] = $($slides_three.eq(currentSlide_three-2)).width()+param1[2];
 			}
-			TweenLite.to(".color--1", 1, {
-				backgroundColor:"#B43934"
-			});
-			TweenLite.to(".jumbotron", 1, {
-				backgroundColor:"#B43934"
-			});
-			leftWidth[0] = $($slides.eq(currentSlide)).width()+difference[0];
-			leftWidth[1] = $($slides_two.eq(currentSlide_two)).width()+difference[1];
-			leftWidth[2] = $($slides_three.eq(currentSlide_three)).width()+difference[2];
+			TweenLite.to(".color--1, .jumbotron", 1, {backgroundColor:"#B43934",delay:4});
+
+			leftWidth[0] = $($slides.eq(currentSlide)).width()+param1[0];
+			leftWidth[1] = $($slides_two.eq(currentSlide_two)).width()+param1[1];
+			leftWidth[2] = $($slides_three.eq(currentSlide_three)).width()+param1[2];
 			
 			widthMoved[0] = widthMoved[0] + leftWidth[0] - minusWidth[0];
 			widthMoved[1] = widthMoved[1] + leftWidth[1] - minusWidth[1];
@@ -86,7 +80,7 @@ $(function(){
 			});		
 			TweenLite.to($slides_three.eq(next_three), 2, {
 				x: "-"+leftWidth[2],delay:2,ease: "Power2.easeInOut"
-			});		
+			});	
 			
 			TweenLite.to($slides.eq(currentSlide), 2, {
 				opacity:"0",
@@ -154,7 +148,7 @@ $(function(){
 			$(".menu__link").css("color","#CCCBCD");
 			$($menuArray.eq(currentSlide)).css("color",$colors[currentSlide]);
 			
-			TweenLite.delayedCall(6, nextSlide);	
+			TweenLite.delayedCall(6, nextSlide,[[8,8,8]]);	
 									
 	}
 	
