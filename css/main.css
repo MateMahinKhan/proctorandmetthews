@@ -561,8 +561,7 @@ html, .font--base, .social__link, .masonry-grid .col--6 .figure__caption {
 .slides {
   font-size: 60px;
   font-size: 5.5vw;
-  line-height: 110%;
-  }
+  line-height: 110%; }
 
 @font-face {
   font-family: 'icomoon';
@@ -2603,7 +2602,7 @@ html {
   display: block;
   padding: 0;
   text-align: left;
-  opacity: 0;
+  
   left: 32px;
   -webkit-transition: all 1500ms ease;
   -moz-transition: all 1500ms ease;
@@ -2622,6 +2621,10 @@ html {
   -webkit-font-feature-settings: "dlig";
   font-feature-settings: "dlig"; }
 
+.opacityZero{
+  opacity: 0;
+}
+
 .slide--hide {
   display: none; }
 
@@ -2629,11 +2632,7 @@ html {
   float: left;
   clear: left;
   padding-right: 12px;
-  -webkit-transition: all 1.5s ease;
-  -moz-transition: all 1.5s ease;
-  -ms-transition: all 1.5s ease;
-  -o-transition: all 1.5s ease;
-  transition: all 1.5s ease; }
+   }
 
 .slide--is-active {
   opacity: 1; }
@@ -3212,121 +3211,3 @@ img.mfp-img {
   padding-top: 0; }
 
 /*# sourceMappingURL=main.css.map */
-
-/*-----New style sheet starts here*/
-.clr{
-	clear:both;
-}
-.slide__header{
-    width: 100%;
-    float: left;
-}
-/*---news---*/
-.slide__heading__news{
-	float:left;
-	display:none;
-}
-.slide__detail__news{
-	float:left;
-	font-weight:normal;
-	opacity:0;
-	display:none;
-	font-size:53px;
-}
-.slide__detail__news2{
-	float: right;
-	font-weight:normal;	
-	opacity:0;
-	display:none;
-}
-/*---case study---*/
-.slide__heading__casestudy{
-	float:left;
-	display:none;
-}
-.slide__detail__casestudy{
-	float:left;
-	font-weight:normal;
-	opacity:0;
-	display:none;
-	font-size:53px;
-}
-.slide__detail__casestudy2{
-	float: right;
-	font-weight:normal;	
-	opacity:0;
-	display:none;
-}
-/*---projects---*/
-.slide__heading__project{
-	float:left;
-	display:none;
-}
-.slide__detail__project{
-	float:left;
-	font-weight:normal;
-	opacity:0;
-	display:none;
-	font-size:53px;
-}
-.slide__detail__project2{
-	float: right;
-	font-weight:normal;	
-	opacity:0;
-	display:none;
-}
-
-/*---practice---*/
-.slide__heading__practice{
-	float:left;
-	display:none;
-}
-.slide__detail__practice{
-	float:left;
-	font-weight:normal;
-	opacity:0;
-	display:none;
-	font-size:53px;
-}
-.slide__detail__practice2{
-	float: right;
-	font-weight:normal;	
-	opacity:0;
-	display:none;
-}
-/*---people---*/
-.slide__heading__people{
-	float:left;
-	display:none;
-}
-.slide__detail__people{
-	float:left;
-	font-weight:normal;
-	opacity:0;
-	display:none;
-	font-size:53px;
-}
-.slide__detail__people2{
-	float: right;
-	font-weight:normal;	
-	opacity:0;
-	display:none;
-}
-/*---contact---*/
-.slide__heading__contact{
-	float:left;
-	display:none;
-}
-.slide__detail__contact{
-	float:left;
-	font-weight:normal;
-	opacity:0;
-	display:none;
-	font-size:53px;
-}
-.slide__detail__contact2{
-	float: right;
-	font-weight:normal;	
-	opacity:0;
-	display:none;
-}
