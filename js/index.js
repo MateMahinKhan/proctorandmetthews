@@ -1,17 +1,29 @@
 // JavaScript Document
-$( document ).ready(function() {
-
-	var slides = $(".slide");
-	var currentSlide = 1;
-	var spaceDifference =8;
-
-	var $menuArray = $(".menu__link");
-	var $colors  = ['#424242','#962524','#926834','#1f3957','#cd7e00','#0e391d','#381b1a'];
+var slides = $(".slide");
+var jumbotron_img = $(".jumbotron__img");
+var $colors  = ['#424242','#962524','#926834','#1f3957','#cd7e00','#0e391d','#381b1a'];
+function createMenu(){
 	
+	for(var i=1; i<slides.length; i++){
+	var navLinkText = $(".slide").eq(i).attr('data-navLinks');
+	
+	$("#menu").append('<li class="menu__item col--1">'+
+	'<a href="#" class="box menu__link link--'+(i+1)+'">'+navLinkText+'</a>'+
+	'</li>');
+	}
+}
+createMenu();
+$( document ).ready(function() {
+	
+	var currentSlide = 1;
+	var spaceDifference = 8;
+	
+	var $menuArray = $(".menu__link");
 	$(".menu__link").css("color","#CCCBCD");
-	$($menuArray.eq(currentSlide-1)).css("color",$colors[currentSlide-1]);
+	$($menuArray.eq(currentSlide-1)).css("color",$(".slide").eq(currentSlide-1).attr('data-bgcolor'));
 
 	function nextSlide() {
+		
 		var tl = new TimelineMax({delay:2 });//onUpdate:updateStats, onRepeat:updateReps, onComplete:restart
 
 		var widthToTransformLine1 = (slides.eq(currentSlide-1).children().eq(0).width()+spaceDifference);
@@ -49,16 +61,15 @@ $( document ).ready(function() {
 		 		 2,
 		 		{ opacity:0}
 		 	)
-			.to([".color--1",".jumbotron"], 2,{ backgroundColor:$colors[currentSlide]});
-			
-			if (currentSlide>0) {
-				tl.to($(".menu__link"), 1, {css:{color:"#CCCBCD"}})
-				.to($($menuArray.eq(currentSlide)), 0,{ color:$colors[currentSlide]});
-
-			} else {
-				 tl.to($(".menu__link"), 1, {css:{color:"#CCCBCD"}})
-			  	 .to($($menuArray.eq(0)), 1, {css:{color:"#381b1a"}});				
-			}
+			.call(removeClass)
+			.to([".color--1",".jumbotron"], 2,{ backgroundColor:$(".slide").eq(currentSlide).attr('data-bgcolor')},"-=2")
+			.to($(".menu__link"), 2, {css:{color:"#CCCBCD"}},"-=2")
+			.to($($menuArray.eq(currentSlide)), 2,{ color:$(".slide").eq(currentSlide).attr('data-bgcolor')},"-=2")
+			.call(changemedia,[$(".slide").eq(currentSlide).attr('data-img')])
+			.to([".jumbotron"],1,{alpha:0})
+			.to([".jumbotron"],2,{alpha:1});
+			//.call(addClass, "+=2");
+			//.call(changemedia,[$(".slide").eq(currentSlide).attr('data-img')]);
 			
 		 	if (currentSlide < slides.length-1) {
 				currentSlide++;
@@ -70,9 +81,6 @@ $( document ).ready(function() {
 	}
 	TweenLite.delayedCall(2, nextSlide);
 			
-		/*	$(".menu__link").hover(function(){
-				$(this).css("color", "yellow");
-			});*/
 			$( ".menu__link" )
 			  .on( "mouseenter", function() {
 				var index =$(".menu__link").index(this);
@@ -82,3 +90,14 @@ $( document ).ready(function() {
 				$(this).css("color", "#CCCBCD");
 			 });
 });
+
+function changemedia(newsrc){
+	$(".jumbotron__img").attr('src',newsrc);
+	
+}
+function removeClass(){
+	$('.jumbotron__media').removeClass('is--hide');
+}
+function addClass(){
+	$('.jumbotron__media').addClass('is--hide');
+}
