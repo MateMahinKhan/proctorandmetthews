@@ -2127,11 +2127,7 @@ a img {
     transition: opacity 2s ease; }
 
 html {
-  -webkit-transition: background 1500ms ease;
-  -moz-transition: background 1500ms ease;
-  -ms-transition: background 1500ms ease;
-  -o-transition: background 1500ms ease;
-  transition: background 1500ms ease; }
+   }
 
 @keyframes img-show {
   0% {
@@ -2193,11 +2189,7 @@ html {
 .jumbotron {
   position: relative;
   overflow: hidden;
-  -webkit-transition: all 1500ms ease;
-  -moz-transition: all 1500ms ease;
-  -ms-transition: all 1500ms ease;
-  -o-transition: all 1500ms ease;
-  transition: all 1500ms ease; }
+   }
   .jumbotron > .container {
     overflow: visible; }
   .jumbotron .c-light {
@@ -2306,22 +2298,14 @@ html {
     height: 100%;
     vertical-align: top;
     z-index: 1;
-    -webkit-transition: all 1500ms ease;
-    -moz-transition: all 1500ms ease;
-    -ms-transition: all 1500ms ease;
-    -o-transition: all 1500ms ease;
-    transition: all 1500ms ease; }
+     }
     .aspect-ratio .jumbotron__media.is--hide {
       filter: alpha(opacity=0);
       -moz-opacity: 0;
       -khtml-opacity: 0;
       opacity: 0;
       z-index: 1;
-      -webkit-transition: all 1500ms ease;
-      -moz-transition: all 1500ms ease;
-      -ms-transition: all 1500ms ease;
-      -o-transition: all 1500ms ease;
-      transition: all 1500ms ease; }
+       }
     .aspect-ratio .jumbotron__media:after {
       display: block;
       content: "";
@@ -2332,7 +2316,7 @@ html {
       left: 0;
       z-index: 1;
       opacity: 1;
-      background: rgba(0, 0, 0, 0.25); }
+       }
     .aspect-ratio .jumbotron__media .jumbotron__img,
     .aspect-ratio .jumbotron__media .jumbotron__video {
       position: absolute;
@@ -2340,6 +2324,9 @@ html {
       left: 0;
       vertical-align: top;
       z-index: 1; }
+      .jumbotron__img{
+        opacity: 0;
+      }
   .aspect-ratio .jumbotron__img,
   .aspect-ratio .jumbotron__video {
     position: absolute;
@@ -2351,11 +2338,7 @@ html {
     position: absolute;
     bottom: 0;
     z-index: 15;
-    -webkit-transition: opacity 1s ease;
-    -moz-transition: opacity 1s ease;
-    -ms-transition: opacity 1s ease;
-    -o-transition: opacity 1s ease;
-    transition: opacity 1s ease; }
+     }
     .jumbotron--with-multitext .aspect-ratio .jumbotron__text {
       opacity: 0; }
       .jumbotron--with-multitext .aspect-ratio .jumbotron__text:first-child {

@@ -24,7 +24,19 @@ $( document ).ready(function() {
 
 	function nextSlide() {
 		
-		var tl = new TimelineMax({delay:2 });//onUpdate:updateStats, onRepeat:updateReps, onComplete:restart
+		var image = false;
+		if ($(".slide").eq(currentSlide).attr('data-img')) {
+		    newMedia = $(".slide").eq(currentSlide).attr('data-img');
+		    image = true;
+		}else if($(".slide").eq(currentSlide).attr('data-video')){
+			newMedia = $(".slide").eq(currentSlide).attr('data-video');
+		}
+		var tl = new TimelineMax(
+			{
+				delay:2,
+				onStart:changemedia,
+				onStartParams:[newMedia,image]
+			});//onUpdate:updateStats, onRepeat:updateReps, onComplete:restart
 
 		var widthToTransformLine1 = (slides.eq(currentSlide-1).children().eq(0).width()+spaceDifference);
 		var widthToTransformLine2 = (slides.eq(currentSlide-1).children().eq(1).width()+spaceDifference);
@@ -61,13 +73,74 @@ $( document ).ready(function() {
 		 		 2,
 		 		{ opacity:0}
 		 	)
-			.call(removeClass)
+			
 			.to([".color--1",".jumbotron"], 2,{ backgroundColor:$(".slide").eq(currentSlide).attr('data-bgcolor')},"-=2")
 			.to($(".menu__link"), 2, {css:{color:"#CCCBCD"}},"-=2")
 			.to($($menuArray.eq(currentSlide)), 2,{ color:$(".slide").eq(currentSlide).attr('data-bgcolor')},"-=2")
-			.call(changemedia,[$(".slide").eq(currentSlide).attr('data-img')])
-			.to([".jumbotron"],1,{alpha:0})
-			.to([".jumbotron"],2,{alpha:1});
+			.addLabel("labelmedia");
+			
+
+				if ($(".slide").eq(currentSlide).attr('data-img')) {
+				    
+				    tl.to($('.jumbotron__img'),2,
+						{
+							opacity:1
+						},
+						"labelmedia-=2"
+					)
+					.addSpace("+=9")
+					.to($('.jumbotron__img'),2,
+						{
+							opacity:0
+						}
+					)
+
+
+				} else if ($(".slide").eq(currentSlide).attr('data-video')) {
+				  //   newMedia = $(".slide").eq(currentSlide).attr('data-video'); // get ID video
+
+
+				  //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if mobile get new attr placehold img
+
+				  //       newMedia = $slideActive.next().attr('data-video-thumb');
+				  //       tl.to($('.jumbotron__img'),2,
+						// 	{
+						// 		opacity:1,
+						// 		onStart:changemedia,
+						// 		onStartParams:[newMedia]
+						// 	},
+						// 	"labelmedia-=2"
+						// );
+				        
+
+				  //   } else {
+
+				  //   	'<div class="jumbotron__video bg__video is--hide wistia_embed wistia_async_uwx6afxdle videoFoam=true" id="uwx6afxdle">&nbsp;</div>'
+
+				  //       // console.log(newMedia);
+				  //       // var $videoContainer = $('#' + newMedia);
+
+				  //       // $videoContainer.addClass('video--is-active');
+
+				  //       // var video = Wistia.api(newMedia);
+				  //       // console.log("I got a handle to the video!", video);
+
+				  //       // video.bind("end", function() {
+
+				  //       //     $('.slideTexting').slideTexting({
+				  //       //         showSlide: 0 // start when wideo end
+				  //       //     });
+				  //       //     $videoContainer.removeClass('video--is-active');
+
+				  //       // });
+
+				  //       // video.play();
+				  //   }
+				}
+				
+			//.call(changemedia,[$(".slide").eq(currentSlide).attr('data-img')])
+			//.to([".jumbotron"],1,{alpha:0})
+			//.to([".jumbotron"],2,{alpha:1});
 			//.call(addClass, "+=2");
 			//.call(changemedia,[$(".slide").eq(currentSlide).attr('data-img')]);
 			
@@ -77,7 +150,7 @@ $( document ).ready(function() {
 			else {
 				currentSlide = 0;		
 			}
-		 	TweenLite.delayedCall(8, nextSlide);
+		 	TweenLite.delayedCall(18, nextSlide);
 	}
 	TweenLite.delayedCall(2, nextSlide);
 			
@@ -91,9 +164,22 @@ $( document ).ready(function() {
 			 });
 });
 
-function changemedia(newsrc){
-	$(".jumbotron__img").attr('src',newsrc);
+function changemedia(newsrc, image){
+	if(image){
+		$(".jumbotron__img").attr('src',newsrc);
+	}else{
+		console.log('its a video');
+		$('.jumbotron__media')[0].innerHTML = '<div class="jumbotron__video bg__video wistia_embed '+
+		'wistia_async_'+newsrc+' videoFoam=true"'+
+		' id="'+newsrc+'">&nbsp;</div>';
+
+		window._wq = window._wq || [];
+		_wq.push({ ""+newsrc: function(video) {
+		  console.log("I got a handle to the video!", video);
+		}});
+	}
 	
+	//removeClass();
 }
 function removeClass(){
 	$('.jumbotron__media').removeClass('is--hide');
@@ -101,3 +187,6 @@ function removeClass(){
 function addClass(){
 	$('.jumbotron__media').addClass('is--hide');
 }
+TimelineLite.prototype.addSpace = function (position) {
+  return this.set({}, {}, position);
+};
